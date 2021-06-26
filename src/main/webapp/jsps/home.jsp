@@ -9,8 +9,9 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to site - GitHub WebHook -- </h1>
-<h1 align="center">Hello.</h1>
+<h1 align="center">Welcome to site</h1>
+<h1 align="center">Hello</h1>
+<h1 align="center">Love You ra Bangaram, ninu baga miss avutunara</h1>
 <hr>
 <div style="text-align: center;">
 	<span>
@@ -20,15 +21,13 @@
 		Yogendra Koduru,
 		#605-1541 Lycee place, Ottawa, Ontario, K1G 4E2
 		<br>
-		<a href="mailto:koduru24111995@gmail.com">Mail to Mithun Technologies</a>
+		<a> href="mailto:koduru24111995@gmail.com">call to Yogendra Koduru Please if you love me</a>
 	</span>
 </div>
 <hr>
-	<p> Service : <a href="services/employee/getEmployeeDetails">Get Employee Details </p>
+	
 <hr>
 <hr>
-<p align=center>Mithun Technologies - Consultant, Training, Development Center.</p>
-<p align=center><small>Copyrights 2021 by <a href="http://mithuntechnologies.com/">Mithun Technologies</a> </small></p>
 
 </body>
 </html>
