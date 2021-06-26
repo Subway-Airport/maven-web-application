@@ -1,0 +1,33 @@
+node{
+    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', 
+	daysToKeepStr: '5', numToKeepStr: '2')), disableConcurrentBuilds(), 
+	[$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
+    
+	def maven = tool name: "maven 3.8.1"
+    
+	stage('CodeCheckout'){
+        git branch: 'development', credentialsId: 'github credentials', url: 'https://github.com/Subway-Airport/maven-web-application.git'
+    }
+    
+	stage('Build'){
+	sh "${maven}/bin/mvn clean package"
+    }
+   
+   /* stage('SonarqubeReport'){
+	sh "${maven}/bin/mvn sonar:sonar"       
+    }*/
+	
+	stage('NexusUpload'){
+	sh "${maven}/bin/mvn deploy"  
+	}
+	
+	stage('Deployment'){
+	sshagent(['1037c9e2-2f43-4eb1-b61c-f6aa4826997c']){
+	sh "scp -o  StrictHostKeyChecking=no target/maven-web-application.war ec2-user@35.183.120.181:/opt/apache-tomcat-9.0.48/webapps/"
+	}
+	}
+	
+	stage('Email'){
+	    emailext body: 'Build is completed and build status is ${BUILD_STATUS}', subject: 'Build is over', to: 'koduru2411995@gmail.com'
+	}
+}
