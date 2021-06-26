@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Yogi- Home Page</title>
-<link href="images/mithunlogo.jpg" rel="icon">
+
 </head>
 </head>
 <body>
@@ -15,13 +15,13 @@
 <hr>
 <div style="text-align: center;">
 	<span>
-		<img src="images/mithunlogo.jpg" alt="" width="100">
+		
 	</span>
 	<span style="font-weight: bold;">
 		Yogendra Koduru,
 		#605-1541 Lycee place, Ottawa, Ontario, K1G 4E2
 		<br>
-		<a> href="mailto:koduru24111995@gmail.com">call to Yogendra Koduru Please if you love me</a>
+		<a>Call to Yogendra Koduru Please if you love me</a>
 	</span>
 </div>
 <hr>
